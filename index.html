@@ -246,6 +246,56 @@ footer{border-top:1px solid var(--line);padding:22px 24px;text-align:center;colo
 footer .logo-chip{width:max-content;margin:0 auto 10px}
 footer .logo-chip img{height:34px}
 
+/* ===== Module 6: Acronyms ===== */
+.gr1{--gc:#6c93ff}.gr2{--gc:#FF6B6D}.gr3{--gc:#F3BA2F}.gr4{--gc:#00C076}.gr5{--gc:#B995FF}
+.gb1{background:rgba(41,98,255,.18);color:#8fb0ff}
+.gb2{background:rgba(255,77,79,.15);color:#ff8284}
+.gb3{background:rgba(243,186,47,.15);color:#F3BA2F}
+.gb4{background:rgba(0,192,118,.14);color:#00C076}
+.gb5{background:rgba(176,124,255,.16);color:#c3a0ff}
+.ac-eg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 4px;font-size:13px;color:var(--muted)}
+.ac-eg .chip{font-family:'Inter',sans-serif;font-weight:700;padding:1px 12px}
+.ac-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:6px 0 14px}
+.ac-bar .tabs{margin:0}
+.ac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.ac{background:var(--card2);border:1px solid var(--line);border-left:4px solid var(--gc,var(--blue));border-radius:12px;padding:13px 15px;display:flex;flex-direction:column;gap:3px;transition:transform .15s,box-shadow .15s}
+.ac:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.ac.exact{box-shadow:0 0 0 2px var(--gold)}
+.ac-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ac-a{font-family:'Inter',sans-serif;font-weight:800;font-size:22px;color:var(--gc);line-height:1.3;word-break:break-word}
+.ac-f{font-family:'Inter',sans-serif;font-size:13.5px;color:#cfd5e6;font-weight:600;line-height:1.55}
+.ac-k{color:var(--gold);font-weight:600;font-size:14.5px;line-height:1.6}
+.ac-m{font-size:14px;color:#aab2c6;margin:3px 0 0;line-height:1.7}
+.ac mark,.fc mark,#ac-table mark{background:var(--gold);color:#111;border-radius:3px;padding:0 2px}
+#ac-table table{min-width:760px}
+#ac-table td.a{font-family:'Inter',sans-serif;font-weight:800;color:var(--gc);font-size:16px}
+#ac-table td.f{font-family:'Inter',sans-serif;color:#cfd5e6;min-width:170px}
+#ac-table td.k{color:var(--gold);min-width:170px;font-weight:600}
+#ac-table td.m{color:#aab2c6;min-width:280px}
+#ac-empty{display:none;text-align:center;color:var(--muted);padding:26px}
+/* flashcards */
+.deck{max-width:660px;margin:0 auto}
+.deck-opt{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:12px;font-size:14px;color:#c4cadb}
+.deck-opt label{display:flex;gap:8px;align-items:center;font-size:14px;color:#c4cadb;font-weight:500;cursor:pointer;margin:0}
+.deck-opt input{width:auto;margin:0;accent-color:var(--gold)}
+.fc{perspective:1200px;height:350px;cursor:pointer;outline:none;margin-bottom:14px}
+.fc-in{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;border-radius:18px}
+.fc.flip .fc-in{transform:rotateY(180deg)}
+.fc:focus-visible .fc-in{box-shadow:0 0 0 3px rgba(41,98,255,.55)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;border:1px solid var(--line);border-top:5px solid var(--gc,var(--blue));background:linear-gradient(160deg,#1b2336,#151924);padding:20px 24px;display:flex;overflow:auto;text-align:center}
+.fc-back{transform:rotateY(180deg)}
+.fc-body{margin:auto;width:100%}
+.fc .big{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(34px,8vw,58px);color:var(--gc);line-height:1.25;word-break:break-word}
+.fc .bigk{font-weight:700;font-size:clamp(22px,4.6vw,30px);color:var(--gold);line-height:1.5}
+.fc .hint{margin-top:14px;color:var(--muted);font-size:13px}
+.fc .ff{font-family:'Inter',sans-serif;font-weight:700;font-size:17px;color:#fff;margin:6px 0 2px}
+.fc .fk{color:var(--gold);font-weight:600;font-size:16px;margin-bottom:8px}
+.fc .fm{font-size:14px;color:#c4cadb;line-height:1.75;margin:0;text-align:left}
+.fc-ctl{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.fc-stat{text-align:center;font-size:13.5px;color:var(--muted)}
+.fc-stat b{color:#fff;font-family:'Inter',sans-serif}
+@media (prefers-reduced-motion:reduce){.fc-in{transition:none}.ac{transition:none}}
+@media (max-width:700px){.fc{height:420px}.ac-grid{grid-template-columns:1fr}}
 @media (max-width:980px){
   #side{transform:translateX(-105%)}
   #side.open{transform:none;box-shadow:0 0 0 100vmax rgba(0,0,0,.6)}
@@ -273,7 +323,7 @@ footer .logo-chip img{height:34px}
   <div class="logo-chip"><img class="logo" alt="FGTC"></div>
   <div class="teacher"><div class="avatar">ស</div><div><small>គ្រូបង្រៀន</small><b>សោម វាសនា</b></div></div>
   <nav class="menu" id="menu"></nav>
-  <div class="prog"><small>វឌ្ឍនភាពសិក្សា <b id="pgTxt" class="num">0/5</b></small><div class="bar"><i id="pgBar"></i></div></div>
+  <div class="prog"><small>វឌ្ឍនភាពសិក្សា <b id="pgTxt" class="num">0/6</b></small><div class="bar"><i id="pgBar"></i></div></div>
 </aside>
 
 <div class="main-wrap">
@@ -300,7 +350,7 @@ footer .logo-chip img{height:34px}
   </div>
 
   <div class="stats4">
-    <div class="s"><b>5</b><span>Modules</span></div>
+    <div class="s"><b>6</b><span>Modules</span></div>
     <div class="s"><b>3</b><span>Calculators</span></div>
     <div class="s"><b id="glCount">0</b><span>ពាក្យក្នុងវចនានុក្រម</span></div>
     <div class="s"><b id="qCount">0</b><span>សំណួរសាកល្បង</span></div>
@@ -623,6 +673,58 @@ footer .logo-chip img{height:34px}
   <div class="pager" data-for="m5"></div>
 </section>
 
+<!-- ================= MODULE 6 ================= -->
+<section class="mod" id="m6">
+  <div class="mod-head"><div class="tag">MODULE 6</div><h1>វចនានុក្រមពាក្យកាត់ហិរញ្ញវត្ថុ <span class="en" style="color:var(--muted);font-size:.6em">Financial Acronyms &amp; Abbreviations Master Glossary</span></h1>
+    <p>ពាក្យកាត់ដែលជួបញឹកញាប់ក្នុងទីផ្សារ Forex, មាស (XAUUSD) និងប្រេង (WTI/Brent) បែងជា ៥ ក្រុម។ វាយពាក្យកាត់ណាមួយក្នុងរបារស្វែងរក ដើម្បីឃើញអត្ថន័យភ្លាមៗ ឬប្តូរទៅ Flashcards ដើម្បីរំលឹកមេរៀន។</p></div>
+
+  <div class="card">
+    <input id="ac-q" type="search" placeholder="🔍 វាយពាក្យកាត់ភ្លាមៗ (ឧ. CFD, NFP, SL, FVG)…" autocomplete="off" spellcheck="false">
+    <div class="ac-eg"><span>សាកល្បង៖</span><span id="ac-eg"></span></div>
+    <div class="chips" id="ac-groups"></div>
+    <div class="ac-bar">
+      <div class="tabs" id="ac-views">
+        <button class="tab active" data-v="cards">▦ Cards</button>
+        <button class="tab" data-v="table">☰ Table</button>
+        <button class="tab" data-v="deck">🗂 Flashcards (Quick Revision)</button>
+      </div>
+      <span class="cnt" id="ac-cnt"></span>
+    </div>
+
+    <div class="ac-grid" id="ac-cards"></div>
+    <div class="tw" id="ac-table" style="display:none"></div>
+
+    <div class="deck" id="ac-deck" style="display:none">
+      <div class="deck-opt">
+        <label><input type="checkbox" id="dk-rev"> បញ្ច្រាស (ឃើញន័យ → ទាយពាក្យកាត់)</label>
+        <label><input type="checkbox" id="dk-hide"> បង្ហាញតែពាក្យដែលមិនទាន់ចាំ</label>
+      </div>
+      <div class="fc" id="fc" tabindex="0" role="button" aria-label="Flashcard — ចុចដើម្បីបង្វិល">
+        <div class="fc-in">
+          <div class="fc-face fc-front"><div class="fc-body" id="fc-front"></div></div>
+          <div class="fc-face fc-back"><div class="fc-body" id="fc-back"></div></div>
+        </div>
+      </div>
+      <div class="fc-ctl">
+        <button class="btn ghost" id="fc-prev">← មុន</button>
+        <button class="btn ghost" id="fc-flip">⟲ បង្វិល</button>
+        <button class="btn ghost" id="fc-next">បន្ទាប់ →</button>
+        <button class="btn ghost" id="fc-shuf">🔀 លាយបៀរ</button>
+      </div>
+      <div class="fc-ctl">
+        <button class="btn ghost" id="fc-again">↻ រំលឹកម្តងទៀត</button>
+        <button class="btn gold" id="fc-know">✔ ចាំហើយ</button>
+      </div>
+      <div class="fc-stat">កាតទី <b id="fc-pos">0 / 0</b> · ចាំហើយ <b id="fc-kn">0</b> ពាក្យ · <button class="chip" id="fc-reset" style="padding:0 10px">កំណត់ឡើងវិញ</button><br><span style="font-size:12.5px">ក្តារចុច៖ ← → ប្តូរកាត · Space/Enter បង្វិល</span></div>
+    </div>
+
+    <div id="ac-empty">រកមិនឃើញពាក្យកាត់ដែលអ្នកស្វែងរកទេ។</div>
+  </div>
+
+  <div class="note"><b>ចំណាំសំខាន់៖</b> ពាក្យក្នុងក្រុមទី ៥ ដូចជា <b>BOS, CHoCH, OB, FVG, LIQ, POI</b> ជាវាក្យសព្ទរបស់ <i>Smart Money Concepts (SMC/ICT)</i> ដែលជាគំនិតរបស់សហគមន៍អ្នកជួញដូរ មិនមែនស្តង់ដារផ្លូវការទេ។ គ្រូបង្រៀននីមួយៗអាចកំណត់និយមន័យខុសគ្នាបន្តិចបន្តួច ហើយវាមិនធានាលទ្ធផលជួញដូរឡើយ។ ពាក្យជាច្រើនក្នុងក្រុមទី ៣ (ECN/STP, MM, Margin Call, Stop Out) ក៏ខុសគ្នាតាមលក្ខខណ្ឌរបស់ Broker នីមួយៗ។</div>
+  <div class="pager" data-for="m6"></div>
+</section>
+
 <!-- ================= QUIZ ================= -->
 <section class="mod" id="quiz">
   <div class="mod-head"><div class="tag">REVIEW</div><h1>កម្រងសំណួរសាកល្បង</h1><p>ឆ្លើយសំណួរទាំងអស់ ហើយចុច "ពិនិត្យលទ្ធផល"។</p></div>
@@ -658,9 +760,10 @@ const MODS = [
   { id:"m3", ic:"3", t:"បញ្ជាទិញ និងគ្រប់គ្រងហានិភ័យ", d:"Pending Orders, TP/SL, 1–2% Rule, Lot Size" },
   { id:"m4", ic:"4", t:"ការវិភាគសេដ្ឋកិច្ច", d:"NFP, CPI, FOMC, OPEC+, EIA + Glossary" },
   { id:"m5", ic:"5", t:"ការវិភាគបច្ចេកទេស", d:"Market Structure, Key Levels, Candlesticks" },
+  { id:"m6", ic:"6", t:"វចនានុក្រមពាក្យកាត់", d:"Financial Acronyms Master Glossary · Search + Flashcards" },
   { id:"quiz", ic:"✎", t:"កម្រងសំណួរសាកល្បង", sub:"Review" }
 ];
-const LEARN = ["m1","m2","m3","m4","m5"];
+const LEARN = ["m1","m2","m3","m4","m5","m6"];
 let done = new Set();
 try{ done = new Set(JSON.parse(localStorage.getItem("fgtc_done") || "[]")); }catch(e){}
 function saveDone(){ try{ localStorage.setItem("fgtc_done", JSON.stringify([...done])); }catch(e){} }
@@ -1111,7 +1214,11 @@ const QZ = [
  { q:"RR 1:2 ត្រូវការ Win Rate ប្រហែលប៉ុន្មាន ដើម្បីស្មើដើម?", o:["50%","33%","25%","75%"], a:1, e:"Break-even = 1 ÷ (1 + 2) ≈ 33.3%។" },
  { q:"ស្តុកប្រេងឆៅ EIA ថយចុះ (Draw) ច្រើនជាងរំពឹង ជាទូទៅធ្វើឲ្យប្រេង?", o:["ធ្លាក់","ឡើង","មិនប្រែប្រួលជានិច្ច","ទីផ្សារបិទ"], a:1, e:"សន្និធិថយ បង្ហាញតម្រូវការខ្លាំង/ផ្គត់ផ្គង់តឹង → ទំនោរឡើង។" },
  { q:"Uptrend ត្រូវបានកំណត់ដោយ?", o:["LH និង LL","HH និង HL","តម្លៃនៅត្រង់","Pin Bar"], a:1, e:"Uptrend = Higher High + Higher Low។" },
- { q:"Bullish Pin Bar (Hammer) ត្រង់ Support មាន Wick វែងនៅទីណា?", o:["ខាងក្រោមវែង","ខាងលើវែង","គ្មាន Wick","Wick ទាំងសងខាងស្មើគ្នា"], a:0, e:"Hammer មាន Wick ខាងក្រោមវែង បង្ហាញការបដិសេធតម្លៃទាប។" }
+ { q:"Bullish Pin Bar (Hammer) ត្រង់ Support មាន Wick វែងនៅទីណា?", o:["ខាងក្រោមវែង","ខាងលើវែង","គ្មាន Wick","Wick ទាំងសងខាងស្មើគ្នា"], a:0, e:"Hammer មាន Wick ខាងក្រោមវែង បង្ហាញការបដិសេធតម្លៃទាប។" },
+ { q:"NFP (Non-Farm Payrolls) គឺជាអ្វី?", o:["ចំនួនការងារថ្មីក្រៅវិស័យកសិកម្មរបស់សហរដ្ឋអាមេរិក","សន្ទស្សន៍តម្លៃអតិថិជន","អត្រាការប្រាក់របស់ ECB","របាយការណ៍ស្តុកប្រេងឆៅ"], a:0, e:"NFP វាស់ចំនួនការងារថ្មីក្នុងសហរដ្ឋអាមេរិក មិនរាប់វិស័យកសិកម្ម។" },
+ { q:"ការបិទការជួញដូរបង្ខំដោយស្វ័យប្រវត្តិ ពេល Margin Level ធ្លាក់ដល់កម្រិតកំណត់ ហៅថា?", o:["Margin Call","Stop Out","Break-Even","Trailing Stop"], a:1, e:"Margin Call គឺការព្រមាន · Stop Out គឺការបិទបង្ខំដោយ Broker។" },
+ { q:"PMI លើស 50 ជាទូទៅមានន័យថា?", o:["សេដ្ឋកិច្ចរួមតូច","សេដ្ឋកិច្ចកំពុងពង្រីក","អតិផរណាខ្ពស់","អត្រាការប្រាក់នឹងឡើង"], a:1, e:"PMI > 50 = ពង្រីក · PMI < 50 = រួមតូច។" },
+ { q:"ក្នុង Uptrend តើ CHoCH (Change of Character) ជាសញ្ញាដំបូងនៅពេលណា?", o:["តម្លៃបង្កើត HH ថ្មី","តម្លៃបំបែក HL ចុះក្រោម","តម្លៃប៉ះ Resistance","RSI ឡើងលើ 70"], a:1, e:"CHoCH ក្នុង Uptrend = តម្លៃបំបែក HL ចុះក្រោម ជាសញ្ញាដំបូងនៃការប្តូរទិស (ត្រូវការ Confirmation)។" }
 ];
 $("qCount").textContent = QZ.length;
 const qf = $("qf");
@@ -1131,6 +1238,270 @@ $("qSubmit").addEventListener("click", () => {
   $("score").style.display = "block"; $("score").scrollIntoView({ behavior:"smooth", block:"center" });
 });
 $("qReset").addEventListener("click", () => { qf.reset(); document.querySelectorAll(".q").forEach(q => q.classList.remove("ok", "bad")); $("score").style.display = "none"; });
+
+/* =====================  Module 6: Acronyms  ===================== */
+const AG = [
+  { g:1, t:"ឧបករណ៍ជួញដូរ និងទ្រព្យសកម្ម", e:"Trading Instruments & Assets" },
+  { g:2, t:"ប្រភេទបញ្ជា និងគ្រប់គ្រងហានិភ័យ", e:"Order Types & Risk Management" },
+  { g:3, t:"គណនី និងយន្តការទីផ្សារ", e:"Account & Market Mechanics" },
+  { g:4, t:"សេដ្ឋកិច្ច និងស្ថាប័នហិរញ្ញវត្ថុ", e:"Fundamental & Central Banking" },
+  { g:5, t:"វិភាគបច្ចេកទេស និងរចនាសម្ព័ន្ធទីផ្សារ", e:"Technical Analysis & Market Structure" }
+];
+const KG = ["", "១", "២", "៣", "៤", "៥"];
+const AC = [
+ /* ---- ក្រុមទី ១ ---- */
+ { g:1, a:"FX / FOREX", al:"fx forex currency", f:"Foreign Exchange", k:"ទីផ្សារប្តូររូបិយប័ណ្ណបរទេស",
+   m:"ទីផ្សារហិរញ្ញវត្ថុអន្តរជាតិសម្រាប់ទិញលក់រូបិយប័ណ្ណជាគូ (ឧ. EURUSD)។ ជាទីផ្សារធំបំផុតនៅលើពិភពលោក មាន Liquidity ខ្ពស់ ហើយដំណើរការ ២៤ ម៉ោង ពីថ្ងៃច័ន្ទដល់ថ្ងៃសុក្រ។" },
+ { g:1, a:"CFD", f:"Contract for Difference", k:"កិច្ចសន្យាលើភាពខុសគ្នានៃតម្លៃ",
+   m:"កិច្ចសន្យារវាងអ្នកជួញដូរ និង Broker ដើម្បីទទួលចំណេញ ឬខាតតាមភាពខុសគ្នារវាងតម្លៃចូល និងតម្លៃចេញ ដោយមិនមានកម្មសិទ្ធិលើទ្រព្យពិត។ មាស និងប្រេងភាគច្រើនជួញដូរជា CFD ដោយប្រើ Leverage ដែលពង្រីកទាំងចំណេញ និងខាត។" },
+ { g:1, a:"XAUUSD", al:"gold xau", f:"Spot Gold vs US Dollar (XAU = Gold, USD = US Dollar)", k:"មាស Spot ធៀបនឹងដុល្លារអាមេរិក",
+   m:"XAU ជាកូដអន្តរជាតិ (ISO) របស់មាស 1 troy ounce។ តម្លៃបង្ហាញជាដុល្លារក្នុងមួយអោន (oz)។ 1 Lot = 100 oz ដូច្នេះចលនា 1.00 = $100។ ជា Safe Haven ដែលរសើបនឹង USD, Real Yield និងអត្រាការប្រាក់។" },
+ { g:1, a:"USOIL / WTI", al:"oil crude xtiusd", f:"West Texas Intermediate Crude Oil", k:"ប្រេងឆៅ West Texas Intermediate (ស្តង់ដារអាមេរិក)",
+   m:"ប្រេងឆៅ benchmark របស់សហរដ្ឋអាមេរិក ដែលប្រគល់ជាក់ស្តែងនៅ Cushing, Oklahoma។ ឈ្មោះ Symbol ខុសតាម Broker (ឧ. USOIL, WTI, XTIUSD)។ ប្រតិកម្មខ្លាំងនឹងរបាយការណ៍ EIA។ 1 Lot ជាទូទៅ = 1,000 barrels។" },
+ { g:1, a:"UKOIL / BRENT", al:"oil crude xbrusd", f:"Brent North Sea Crude Oil", k:"ប្រេងឆៅ Brent ពីសមុទ្រខាងជើង",
+   m:"ប្រេងឆៅ benchmark សកលដែលប្រើយ៉ាងទូលាយ ដើមកំណើតពីសមុទ្រខាងជើង (អឺរ៉ុប)។ ជាទូទៅតម្លៃខ្ពស់ជាង WTI បន្តិច ប៉ុន្តែមិនថេរទេ។ ឈ្មោះ Symbol ខុសតាម Broker (ឧ. UKOIL, BRENT, XBRUSD)។" },
+ { g:1, a:"DXY / USDX", al:"dollar index", f:"US Dollar Index", k:"សន្ទស្សន៍ដុល្លារអាមេរិក",
+   m:"វាស់តម្លៃ USD ធៀបនឹងកញ្ចប់រូបិយប័ណ្ណ ៦ (EUR ≈ 57.6%, JPY, GBP, CAD, SEK, CHF)។ DXY ឡើង = USD ខ្លាំង ជាទូទៅបង្កសម្ពាធលើមាស និងគូ EURUSD, GBPUSD។" },
+ /* ---- ក្រុមទី ២ ---- */
+ { g:2, a:"TP", al:"take profit", f:"Take Profit", k:"កំណត់យកប្រាក់ចំណេញ",
+   m:"បញ្ជាបិទការជួញដូរដោយស្វ័យប្រវត្តិ នៅពេលតម្លៃទៅដល់គោលដៅចំណេញ។ Buy៖ TP លើតម្លៃចូល · Sell៖ TP ក្រោមតម្លៃចូល។" },
+ { g:2, a:"SL", al:"stop loss", f:"Stop Loss", k:"កំណត់ការខាតបង់",
+   m:"បញ្ជាបិទការជួញដូរដោយស្វ័យប្រវត្តិ ដើម្បីកំណត់ការខាតអតិបរមា។ Buy៖ SL ក្រោមតម្លៃចូល · Sell៖ SL លើតម្លៃចូល។ ជាឧបករណ៍ការពារដើមទុនសំខាន់បំផុត ប៉ុន្តែពេលទីផ្សារលោត (Gap) តម្លៃបិទអាចអាក្រក់ជាង SL (Slippage)។" },
+ { g:2, a:"BE", al:"break even breakeven", f:"Break-Even", k:"ចំណុចស្មើដើម (មិនចំណេញមិនខាត)",
+   m:"ការរំកិល SL មកត្រង់តម្លៃចូល នៅពេលការជួញដូរចំណេញបានគ្រប់គ្រាន់ ដើម្បីកុំឲ្យប្រែជាខាត។ ក្នុងការអនុវត្តគួរបូកបន្ថែមបន្តិចសម្រាប់ Spread/Commission/Swap។" },
+ { g:2, a:"RRR / RR", al:"risk reward ratio", f:"Risk-to-Reward Ratio", k:"សមាមាត្រហានិភ័យទល់នឹងផលចំណេញ",
+   m:"ឧ. 1:2 = ប្រថុយ $1 ដើម្បីរក $2។ ដើម្បីស្មើដើមនឹង RR 1:2 ត្រូវការ Win Rate ≈ 33.3% (រូបមន្ត 1 ÷ (1 + RR)) មិនរាប់ Spread/Commission។" },
+ { g:2, a:"PnL / P&L", al:"profit loss pl p/l", f:"Profit and Loss", k:"ចំណេញ និងខាតបង់",
+   m:"លទ្ធផលសុទ្ធនៃការជួញដូរ។ Floating (Unrealized) P/L = ការជួញដូរកំពុងបើក · Realized P/L = ការជួញដូរដែលបានបិទរួច។" },
+ { g:2, a:"DD", al:"drawdown", f:"Drawdown", k:"ការធ្លាក់ចុះនៃដើមទុន (ពីកំពូលទៅបាត)",
+   m:"វាស់ជា % ពី Equity ខ្ពស់បំផុតទៅចំណុចទាបបំផុត។ ការបាត់បង់ 50% ត្រូវការចំណេញ 100% ដើម្បីត្រឡប់មកដើមវិញ (Recovery = Loss ÷ (1 − Loss))។" },
+ { g:2, a:"TS", al:"trailing stop", f:"Trailing Stop", k:"កំណត់ការខាតបង់តាមដាន (Stop ដែលរំកិលតាមតម្លៃ)",
+   m:"SL ដែលរំកិលតាមតម្លៃក្នុងទិសដៅចំណេញ ទៅតាមចម្ងាយ (pips) ដែលបានកំណត់ ហើយមិនថយក្រោយវិញ។ ជួយចាក់សោចំណេញ។ ក្នុង MT4/MT5 ជាទូទៅដំណើរការពី Platform ដូច្នេះត្រូវផ្ទៀងផ្ទាត់លក្ខខណ្ឌជាមួយ Broker។" },
+ { g:2, a:"MO / ME", al:"market order market execution", f:"Market Order / Market Execution", k:"បញ្ជាទីផ្សារ / ការអនុវត្តតាមទីផ្សារ",
+   m:"បើកការជួញដូរភ្លាមៗតាមតម្លៃទីផ្សារបច្ចុប្បន្ន (Buy តាម Ask · Sell តាម Bid)។ អាចមាន Slippage ពេល Volatility ខ្ពស់។" },
+ { g:2, a:"PO", al:"pending order limit stop", f:"Pending Order", k:"បញ្ជាដាក់ទុកមុន",
+   m:"បញ្ជាដែលដំណើរការពេលតម្លៃទៅដល់ចំណុចកំណត់៖ Buy Limit, Sell Limit, Buy Stop, Sell Stop។ Limit = ទល់ចំណុចត្រឡប់ (Reversal) · Stop = ទៅតាមទិសដៅ Breakout។" },
+ /* ---- ក្រុមទី ៣ ---- */
+ { g:3, a:"LOT", al:"standard mini micro lot size", f:"Lot (Standard · Mini · Micro)", k:"ឡូត៍ — ឯកតាទំហំការជួញដូរ",
+   m:"Forex៖ Standard 1.00 = 100,000 units · Mini 0.10 = 10,000 · Micro 0.01 = 1,000។ មាស៖ 1 Lot = 100 oz · ប្រេង៖ 1 Lot ជាទូទៅ = 1,000 barrels (ផ្ទៀងផ្ទាត់ជាមួយ Broker)។ \"LOT\" ជាឯកតា មិនមែនជាពាក្យកាត់ពិតប្រាកដទេ។" },
+ { g:3, a:"PIP", al:"price interest point percentage in point pipette", f:"Percentage in Point (ក្នុងស្លាយមេរៀនហៅ Price Interest Point)", k:"ឯកតាចលនាតម្លៃតូចបំផុតរបស់គូរូបិយប័ណ្ណ",
+   m:"គូភាគច្រើន 1 pip = 0.0001 · គូ JPY 1 pip = 0.01។ ក្នុង 1 Lot EURUSD៖ 1 pip ≈ $10។ ខ្ទង់ទសភាគបន្ថែមទី ៥ ហៅ Pipette។ ឈ្មោះពេញទាំងពីរ សំដៅលើឯកតាតែមួយ។" },
+ { g:3, a:"EQ", al:"equity", f:"Equity", k:"តម្លៃពិតនៃគណនី (មូលធនសុទ្ធ)",
+   m:"Equity = Balance + Floating P/L។ ជាតម្លៃគណនីពិតនៅពេលនេះ ហើយត្រូវប្រើក្នុងការគណនា Margin Level។" },
+ { g:3, a:"BAL", al:"balance", f:"Balance", k:"សមតុល្យគណនី",
+   m:"ទឹកប្រាក់ក្នុងគណនី មិនរាប់ Floating P/L របស់ការជួញដូរដែលកំពុងបើក។ ប្រែប្រួលពេលបិទការជួញដូរ ដាក់/ដកប្រាក់ ឬមានការកាត់ថ្លៃសេវា។" },
+ { g:3, a:"MAR", al:"margin used margin", f:"Margin / Used Margin", k:"ទឹកប្រាក់ធានា (ទឹកប្រាក់ដែលត្រូវចាក់សោ)",
+   m:"Used Margin = Notional Value ÷ Leverage។ ឧ. Gold 1 Lot @4000, Leverage 1:100 → $4,000។ វាមិនមែនថ្លៃសេវាទេ គឺជាទឹកប្រាក់ត្រូវរក្សាទុកខណៈកំពុងបើកការជួញដូរ។" },
+ { g:3, a:"FM", al:"free margin", f:"Free Margin", k:"Margin ដែលនៅសល់ (ទំនេរ)",
+   m:"Free Margin = Equity − Used Margin។ ជាទឹកប្រាក់ដែលអាចប្រើបើកការជួញដូរថ្មី ហើយជាសមត្ថភាពទប់ទល់នឹងការខាត។" },
+ { g:3, a:"ML", al:"margin level", f:"Margin Level %", k:"កម្រិត Margin ជាភាគរយ",
+   m:"Margin Level = (Equity ÷ Used Margin) × 100។ កាន់តែទាប កាន់តែប្រថុយ → Margin Call → Stop Out។" },
+ { g:3, a:"MC", al:"margin call", f:"Margin Call", k:"ការជូនដំណឹងឲ្យបន្ថែម Margin",
+   m:"ការព្រមានពី Broker ពេល Margin Level ធ្លាក់ដល់កម្រិតកំណត់ (ឧ. 100% ប៉ុន្តែខុសតាម Broker)។ អ្នកត្រូវដាក់ប្រាក់បន្ថែម ឬបិទការជួញដូរមួយចំនួន។" },
+ { g:3, a:"SO", al:"stop out", f:"Stop Out", k:"ការបិទបង្ខំដោយស្វ័យប្រវត្តិ",
+   m:"Broker បិទការជួញដូរដោយស្វ័យប្រវត្តិ (ជាទូទៅចាប់ផ្តើមពីការជួញដូរដែលខាតច្រើនបំផុត) ពេល Margin Level ធ្លាក់ដល់កម្រិត Stop Out ដែល Broker កំណត់ (ឧ. 50%, 20%)។" },
+ { g:3, a:"LP", al:"liquidity provider", f:"Liquidity Provider", k:"អ្នកផ្តល់សន្ទនីយភាព (Liquidity)",
+   m:"ធនាគារធំៗ ឬស្ថាប័នហិរញ្ញវត្ថុ ដែលផ្តល់តម្លៃ Bid/Ask ឲ្យ Broker។ LP កាន់តែច្រើន ជាទូទៅ Spread កាន់តែតូច និងការអនុវត្តបញ្ជាកាន់តែល្អ។" },
+ { g:3, a:"ECN / STP", al:"electronic communication network straight through processing dealing desk", f:"Electronic Communication Network / Straight Through Processing", k:"បណ្តាញទំនាក់ទំនងអេឡិចត្រូនិក / ដំណើរការបញ្ជូនផ្ទាល់",
+   m:"ម៉ូដែល Broker ដែលបញ្ជូនបញ្ជារបស់អ្នកទៅ LP/ទីផ្សារ (No Dealing Desk)។ ECN៖ ជាទូទៅ Spread ទាប + Commission · STP៖ ជាទូទៅ Spread រួមបញ្ចូល Markup។ លក្ខខណ្ឌពិតខុសតាម Broker។" },
+ { g:3, a:"MM", al:"market maker dealing desk", f:"Market Maker", k:"អ្នកបង្កើតទីផ្សារ",
+   m:"Broker (Dealing Desk) ដែលកំណត់តម្លៃ Bid/Ask ខ្លួនឯង ហើយអាចជាភាគីម្ខាងនៃការជួញដូររបស់អ្នក។ Spread ជាទូទៅថេរ។ គួរជ្រើសរើស Broker ដែលមានអ្នកត្រួតពិនិត្យ (Regulated)។" },
+ /* ---- ក្រុមទី ៤ ---- */
+ { g:4, a:"FED", al:"federal reserve fed", f:"Federal Reserve System", k:"ប្រព័ន្ធធនាគារកណ្តាលសហរដ្ឋអាមេរិក",
+   m:"កំណត់គោលនយោបាយរូបិយវត្ថុអាមេរិក រួមទាំងអត្រាការប្រាក់ (Fed Funds Rate)។ សុន្ទរកថារបស់ប្រធាន Fed ជះឥទ្ធិពលខ្លាំងលើ USD, Gold និងទីផ្សារទូទៅ។" },
+ { g:4, a:"FOMC", al:"interest rate decision", f:"Federal Open Market Committee", k:"គណៈកម្មាធិការទីផ្សារបើកចំហរបស់ Fed",
+   m:"ប្រជុំ ៨ ដងក្នុងមួយឆ្នាំ ដើម្បីសម្រេចអត្រាការប្រាក់ ចេញ Statement និងកំណត់ហេតុប្រជុំ (Minutes)។ Hawkish → USD ▲ Gold ▼ ជាទូទៅ · Dovish ផ្ទុយមកវិញ។" },
+ { g:4, a:"ECB", al:"euro", f:"European Central Bank", k:"ធនាគារកណ្តាលអឺរ៉ុប",
+   m:"ធនាគារកណ្តាលរបស់តំបន់ប្រើប្រាស់ Euro (EUR) ទីស្នាក់ការនៅ Frankfurt។ ការសម្រេចអត្រាការប្រាក់ និង Press Conference ជះឥទ្ធិពលលើ EURUSD។" },
+ { g:4, a:"BOJ", al:"japan yen", f:"Bank of Japan", k:"ធនាគារកណ្តាលជប៉ុន",
+   m:"ជះឥទ្ធិពលលើ JPY។ ជប៉ុនមានអត្រាការប្រាក់ទាបយូរឆ្នាំ ដូច្នេះការផ្លាស់ប្តូរគោលនយោបាយអាចធ្វើឲ្យ USDJPY ប្រែប្រួលខ្លាំង។" },
+ { g:4, a:"BOE", al:"england uk pound sterling mpc", f:"Bank of England", k:"ធនាគារកណ្តាលអង់គ្លេស",
+   m:"គណៈកម្មាធិការគោលនយោបាយរូបិយវត្ថុ (MPC) សម្រេចអត្រាការប្រាក់ ដែលជះឥទ្ធិពលលើ GBP (ឧ. GBPUSD, GBPJPY)។" },
+ { g:4, a:"NFP", al:"non farm payrolls nonfarm jobs", f:"Non-Farm Payrolls", k:"ចំនួនការងារថ្មីក្រៅវិស័យកសិកម្ម (សហរដ្ឋអាមេរិក)",
+   m:"ចេញផ្សាយដោយ BLS ជាទូទៅថ្ងៃសុក្រដំបូងនៃខែ។ ជារបាយការណ៍ធ្វើឲ្យ USD, Gold និង Indices ប្រែប្រួលខ្លាំង។ ការងារខ្លាំងជាងការរំពឹង → USD ▲ Gold ▼ ជាទូទៅ។" },
+ { g:4, a:"CPI", al:"inflation consumer price", f:"Consumer Price Index", k:"សន្ទស្សន៍តម្លៃអតិថិជន",
+   m:"រង្វាស់ស្តង់ដារនៃអតិផរណា (Inflation)។ CPI ខ្ពស់ជាងរំពឹង → រំពឹងអត្រាការប្រាក់ខ្ពស់ → USD ▲ ជាទូទៅ Gold ▼។ មាន Core CPI ដែលមិនរាប់អាហារ និងថាមពល។" },
+ { g:4, a:"PPI", al:"producer price", f:"Producer Price Index", k:"សន្ទស្សន៍តម្លៃផលិតករ",
+   m:"វាស់ការប្រែប្រួលតម្លៃដែលអ្នកផលិតទទួលបាន ហើយអាចជាសញ្ញាប្រាប់មុនអំពីអតិផរណា (CPI)។" },
+ { g:4, a:"GDP", al:"gross domestic product growth", f:"Gross Domestic Product", k:"ផលិតផលក្នុងស្រុកសរុប",
+   m:"តម្លៃសរុបនៃទំនិញ និងសេវាកម្មដែលផលិតក្នុងប្រទេស វាស់កំណើនសេដ្ឋកិច្ចរៀងរាល់ត្រីមាស។ GDP ធ្លាក់ជាប់គ្នា ២ ត្រីមាស ជាទូទៅហៅថា Recession បច្ចេកទេស។" },
+ { g:4, a:"PMI", al:"purchasing managers index", f:"Purchasing Managers' Index", k:"សន្ទស្សន៍អ្នកគ្រប់គ្រងផ្នែកទិញ",
+   m:"ស្ទង់មតិក្រុមហ៊ុន (Manufacturing/Services)។ លើស 50 = សេដ្ឋកិច្ចពង្រីក · ក្រោម 50 = រួមតូច។ ចេញលឿនជាងទិន្នន័យផ្លូវការ ដូច្នេះជាសញ្ញាមុន។" },
+ { g:4, a:"OPEC+", al:"opec oil", f:"Organization of the Petroleum Exporting Countries Plus", k:"អង្គការប្រទេសនាំចេញប្រេង និងសម្ព័ន្ធមិត្ត",
+   m:"OPEC រួមជាមួយប្រទេសផលិតប្រេងមិនមែនសមាជិក (ឧ. រុស្ស៊ី) ដើម្បីកំណត់កូតាផលិតកម្ម។ កាត់ផលិតកម្ម → ប្រេង ▲ · បង្កើនផលិតកម្ម → ប្រេង ▼ ជាទូទៅ។" },
+ { g:4, a:"EIA", al:"crude oil inventories energy", f:"Energy Information Administration", k:"រដ្ឋបាលព័ត៌មានថាមពលសហរដ្ឋអាមេរិក",
+   m:"ចេញផ្សាយ Crude Oil Inventories ប្រចាំសប្តាហ៍ (ជាទូទៅថ្ងៃពុធ)។ ស្តុកថយ (Draw) ច្រើនជាងរំពឹង → ប្រេង ▲ · ស្តុកកើន (Build) → ប្រេង ▼ ជាទូទៅ។" },
+ { g:4, a:"QE / QT", al:"quantitative easing tightening", f:"Quantitative Easing / Quantitative Tightening", k:"ការបន្ធូរបន្ថយបរិមាណ / ការរឹតបន្តឹងបរិមាណ",
+   m:"QE៖ ធនាគារកណ្តាលទិញ Bond ដើម្បីបញ្ចូលលុយទៅក្នុងសេដ្ឋកិច្ច (ជាទូទៅ USD ▼ Gold ▲) · QT៖ កាត់បន្ថយសន្និធិ Bond ដើម្បីដកលុយចេញ (ជាទូទៅ USD ▲)។" },
+ /* ---- ក្រុមទី ៥ ---- */
+ { g:5, a:"S/R", al:"support resistance sr", f:"Support & Resistance", k:"តំបន់ទប់ខាងក្រោម និងតំបន់ទប់ខាងលើ",
+   m:"Support = កម្រិតទាបដែលតម្លៃតែងងើបឡើងវិញ · Resistance = កម្រិតខ្ពស់ដែលតម្លៃតែងត្រឡប់ចុះ។ គួរគូរជា Zone ហើយពេលត្រូវបំបែក តួនាទីតែងប្តូរគ្នា (Break & Retest)។" },
+ { g:5, a:"TF", al:"timeframe m1 m5 m15 m30 h1 h4 d1 w1 mn", f:"Timeframe (M1, M5, M15, H1, H4, D1, W1, MN)", k:"ក្របខ័ណ្ឌពេលវេលានៃ Candle នីមួយៗ",
+   m:"M = នាទី (M1, M5, M15, M30) · H1 = 1 ម៉ោង · H4 = 4 ម៉ោង · D1 = 1 ថ្ងៃ · W1 = 1 សប្តាហ៍ · MN = 1 ខែ។ Timeframe ធំ សញ្ញាមានទម្ងន់ជាង។ អ្នកជួញដូរតែងមើលពីធំទៅតូច (Top-down)។" },
+ { g:5, a:"HH / HL", al:"uptrend higher high higher low", f:"Higher High / Higher Low", k:"កំពូលខ្ពស់ជាងមុន / បាតខ្ពស់ជាងមុន",
+   m:"រចនាសម្ព័ន្ធនៃ Uptrend។ រកទិញនៅ HL (Pullback) ក្នុងទិសដៅ Trend។ Trend ត្រូវបំបែក នៅពេលតម្លៃបង្កើត Lower Low។" },
+ { g:5, a:"LH / LL", al:"downtrend lower high lower low", f:"Lower High / Lower Low", k:"កំពូលទាបជាងមុន / បាតទាបជាងមុន",
+   m:"រចនាសម្ព័ន្ធនៃ Downtrend។ រកលក់នៅ LH ក្នុងទិសដៅ Trend។ Trend ត្រូវបំបែក នៅពេលតម្លៃបង្កើត Higher High។" },
+ { g:5, a:"BOS", al:"break of structure smc ict", f:"Break of Structure", k:"ការបំបែករចនាសម្ព័ន្ធទីផ្សារ",
+   m:"តម្លៃបិទ (Candle Close) ឆ្លងកាត់ High ឬ Low សំខាន់ក្នុងទិសដៅ Trend ដែលមានស្រាប់ → បញ្ជាក់ថា Trend បន្តទៅមុខ។ វាក្យសព្ទ SMC/ICT។" },
+ { g:5, a:"CHoCH", al:"change of character choch smc ict", f:"Change of Character", k:"ការផ្លាស់ប្តូរចរិតលក្ខណៈរបស់ទីផ្សារ",
+   m:"សញ្ញាដំបូងដែល Trend អាចប្តូរទិស៖ ក្នុង Uptrend តម្លៃបំបែក HL ចុះក្រោម ឬក្នុង Downtrend តម្លៃបំបែក LH ឡើងលើ។ ត្រូវការ Confirmation បន្ថែម។ វាក្យសព្ទ SMC/ICT។" },
+ { g:5, a:"OB", al:"order block smc ict", f:"Order Block", k:"ប្លុកបញ្ជា (តំបន់បញ្ជាស្ថាប័ន)",
+   m:"Candle ចុងក្រោយមុនចលនាខ្លាំងមួយ ដែលជឿថាមានបញ្ជាធំរបស់ស្ថាប័ន។ Bullish OB = Candle ក្រហមចុងក្រោយមុនឡើងខ្លាំង · Bearish OB = Candle បៃតងចុងក្រោយមុនធ្លាក់ខ្លាំង។ តម្លៃអាចត្រឡប់មកប៉ះ ហើយជា POI មួយ។ វាក្យសព្ទ SMC។" },
+ { g:5, a:"FVG", al:"fair value gap imbalance smc ict", f:"Fair Value Gap", k:"គម្លាតតម្លៃសមធម៌ (Imbalance)",
+   m:"គម្លាតក្នុងលំនាំ ៣ Candle ដែល Wick របស់ Candle ទី ១ និងទី ៣ មិនត្រួតគ្នាលើ Candle ទី ២ ដែលធំ។ តម្លៃតែងត្រឡប់មកបំពេញគម្លាតនេះ ប៉ុន្តែមិនមែនជានិច្ចទេ។ វាក្យសព្ទ SMC/ICT។" },
+ { g:5, a:"LIQ", al:"liquidity bsl ssl buy side sell side sweep stop hunt smc ict", f:"Liquidity: BSL (Buy-Side Liquidity) / SSL (Sell-Side Liquidity)", k:"សន្ទនីយភាព៖ BSL = ខាងលើ High · SSL = ក្រោម Low",
+   m:"BSL = Stop Loss របស់អ្នក Sell និង Buy Stop ដែលនៅលើ High · SSL = Stop Loss របស់អ្នក Buy និង Sell Stop ដែលនៅក្រោម Low។ តម្លៃអាចត្រូវបាន \"ទាញ\" ទៅយក Liquidity (Liquidity Sweep / Stop Hunt) មុនចលនាពិត។ វាក្យសព្ទ SMC។" },
+ { g:5, a:"POI", al:"point of interest smc ict", f:"Point of Interest", k:"ចំណុចចាប់អារម្មណ៍ (តំបន់ដែលត្រូវតាមដាន)",
+   m:"តំបន់តម្លៃដែលអ្នកជួញដូររំពឹងថានឹងមានប្រតិកម្ម (OB, FVG, S/R, Liquidity)។ គួររង់ចាំ Confirmation (ឧ. CHoCH ឬ Rejection Candle) មុនចូល។" },
+ { g:5, a:"EMA / SMA", al:"moving average exponential simple", f:"Exponential Moving Average / Simple Moving Average", k:"មធ្យមភាគចល័តអិចស្ប៉ូណង់ស្យែល / មធ្យមភាគចល័តសាមញ្ញ",
+   m:"SMA = មធ្យមភាគតម្លៃបិទនៃ N Candle ដោយទម្ងន់ស្មើគ្នា · EMA ផ្តល់ទម្ងន់ច្រើនជាងលើតម្លៃថ្មី ដូច្នេះប្រតិកម្មលឿនជាង។ MA 50/200 ប្រើមើល Trend (Golden Cross / Death Cross)។" },
+ { g:5, a:"RSI", al:"relative strength index overbought oversold", f:"Relative Strength Index", k:"សន្ទស្សន៍កម្លាំងធៀប",
+   m:"Oscillator ពី 0 ដល់ 100 (ស្តង់ដារ 14 Period បង្កើតដោយ J. Welles Wilder)។ លើ 70 = Overbought · ក្រោម 30 = Oversold។ ក្នុង Trend ខ្លាំង RSI អាចនៅលើ 70 បានយូរ ដូច្នេះមិនមែនជាសញ្ញា Sell ដោយខ្លួនឯងទេ។" },
+ { g:5, a:"MACD", al:"moving average convergence divergence", f:"Moving Average Convergence Divergence", k:"ការកៀកគ្នា/ឃ្លាតគ្នានៃមធ្យមភាគចល័ត",
+   m:"MACD Line = EMA12 − EMA26 · Signal = EMA9 នៃ MACD · Histogram = MACD − Signal។ MACD កាត់ Signal ឡើងលើ = កម្លាំង Buy · កាត់ចុះក្រោម = កម្លាំង Sell។ ជា Indicator យឺត (Lagging)។" }
+];
+AC.forEach((x, i) => {
+  x.i = i;
+  x.tk = (x.a + " " + (x.al || "")).toLowerCase().split(/[\s\/]+/).filter(Boolean);
+  x.fw = x.f.toLowerCase().split(/[^a-z0-9&]+/).filter(Boolean);
+  x.hay = (x.f + " " + x.k + " " + x.m + " " + (x.al || "")).toLowerCase();
+  x.key = x.a;
+});
+const acKnown = new Set();
+try{ JSON.parse(localStorage.getItem("fgtc_ac_known") || "[]").forEach(v => acKnown.add(v)); }catch(e){}
+const acSave = () => { try{ localStorage.setItem("fgtc_ac_known", JSON.stringify([...acKnown])); }catch(e){} };
+let acGroup = 0, acView = "cards", acDeck = [], acPos = 0, acFlip = false, acToken = 0;
+
+/* chips */
+$("ac-groups").innerHTML = `<button class="chip active" data-g="0">ទាំងអស់ (${AC.length})</button>` +
+  AG.map(g => `<button class="chip" data-g="${g.g}">ក្រុម ${KG[g.g]} · ${g.t} (${AC.filter(x => x.g === g.g).length})</button>`).join("");
+$("ac-eg").innerHTML = ["CFD","NFP","SL","FVG","RSI","DXY","BOS","MC"].map(t => `<button class="chip" data-eg="${t}">${t}</button>`).join(" ");
+
+function acList(){
+  const q = $("ac-q").value.trim().toLowerCase(), out = [];
+  AC.forEach(x => {
+    if(acGroup && x.g !== acGroup) return;
+    let s = 0;
+    if(!q) s = 1;
+    else if(x.tk.includes(q)) s = 3;
+    else if(x.tk.some(t => t.startsWith(q))) s = 2;
+    else if(q.length <= 3){ if(x.fw.some(w => w.startsWith(q))) s = 1; }
+    else if(x.hay.includes(q) || x.tk.some(t => t.includes(q))) s = 1;
+    if(s) out.push({ x, s });
+  });
+  out.sort((a, b) => b.s - a.s || a.x.i - b.x.i);
+  return out;
+}
+function acHl(str, q){
+  str = esc(str); if(!q) return str;
+  const eq = esc(q), i = str.toLowerCase().indexOf(eq);
+  return i < 0 ? str : str.slice(0, i) + "<mark>" + str.slice(i, i + eq.length) + "</mark>" + str.slice(i + eq.length);
+}
+function acRender(){
+  const q = $("ac-q").value.trim().toLowerCase(), L = acList();
+  $("ac-cnt").textContent = "បង្ហាញ " + L.length + " / " + AC.length + " ពាក្យកាត់";
+  $("ac-empty").style.display = L.length ? "none" : "block";
+  $("ac-cards").style.display = acView === "cards" && L.length ? "grid" : "none";
+  $("ac-table").style.display = acView === "table" && L.length ? "block" : "none";
+  $("ac-deck").style.display = acView === "deck" && L.length ? "block" : "none";
+  if(acView === "cards"){
+    $("ac-cards").innerHTML = L.map(({ x, s }) =>
+      `<div class="ac gr${x.g}${q && s === 3 ? " exact" : ""}"><div class="ac-top"><span class="ac-a">${acHl(x.a, q)}</span><span class="badge gb${x.g}">ក្រុម ${KG[x.g]}</span></div>
+       <div class="ac-f">${acHl(x.f, q)}</div><div class="ac-k">${acHl(x.k, q)}</div><p class="ac-m">${acHl(x.m, q)}</p></div>`).join("");
+  }else if(acView === "table"){
+    $("ac-table").innerHTML = `<table><thead><tr><th>ពាក្យកាត់</th><th>Full Term</th><th>ភាសាខ្មែរ</th><th>ន័យបច្ចេកទេស និងសារៈសំខាន់ក្នុងការជួញដូរ</th><th>ក្រុម</th></tr></thead><tbody>` +
+      L.map(({ x }) => `<tr class="gr${x.g}"><td class="a">${acHl(x.a, q)}</td><td class="f">${acHl(x.f, q)}</td><td class="k">${acHl(x.k, q)}</td><td class="m">${acHl(x.m, q)}</td><td><span class="badge gb${x.g}">${KG[x.g]}</span></td></tr>`).join("") + `</tbody></table>`;
+  }else{
+    acBuildDeck(L.map(o => o.x));
+  }
+}
+
+/* ---- flashcards ---- */
+let acDeckSrc = [];
+function acBuildDeck(list){
+  acDeckSrc = list;
+  acDeck = $("dk-hide").checked ? list.filter(x => !acKnown.has(x.key)) : list.slice();
+  acPos = 0; acFlip = false; $("fc").classList.remove("flip"); acFill();
+}
+function acFill(){
+  const has = acDeck.length > 0;
+  $("fc").style.display = has ? "block" : "none";
+  document.querySelectorAll("#ac-deck .fc-ctl").forEach(e => e.style.display = has ? "flex" : "none");
+  if(!has){
+    $("fc-pos").textContent = "0 / 0";
+    $("fc-kn").textContent = acDeckSrc.filter(x => acKnown.has(x.key)).length;
+    let m = document.getElementById("fc-done");
+    if(!m){ m = document.createElement("div"); m.id = "fc-done"; m.className = "tip"; $("fc").insertAdjacentElement("beforebegin", m); }
+    m.style.display = "block"; m.textContent = "🎉 អ្នកបានចាំពាក្យទាំងអស់ក្នុងបញ្ជីនេះរួចហើយ។ ចុច \"កំណត់ឡើងវិញ\" ឬបិទជម្រើស \"បង្ហាញតែពាក្យដែលមិនទាន់ចាំ\" ដើម្បីរំលឹកម្តងទៀត។";
+    return;
+  }
+  const dn = document.getElementById("fc-done"); if(dn) dn.style.display = "none";
+  const x = acDeck[acPos], rev = $("dk-rev").checked;
+  $("fc").className = "fc gr" + x.g + (acFlip ? " flip" : "");
+  const full = `<div class="ff">${esc(x.f)}</div><div class="fk">${esc(x.k)}</div><p class="fm">${esc(x.m)}</p>`;
+  if(rev){
+    $("fc-front").innerHTML = `<span class="badge gb${x.g}">ក្រុម ${KG[x.g]}</span><div class="bigk" style="margin-top:12px">${esc(x.k)}</div><div class="hint">ពាក្យកាត់អ្វី? ចុចដើម្បីមើលចម្លើយ</div>`;
+    $("fc-back").innerHTML = `<div class="big" style="font-size:clamp(28px,6vw,42px)">${esc(x.a)}</div>${full}`;
+  }else{
+    $("fc-front").innerHTML = `<span class="badge gb${x.g}">ក្រុម ${KG[x.g]}</span><div class="big" style="margin-top:10px">${esc(x.a)}</div><div class="hint">តើមានន័យអ្វី? ចុចដើម្បីមើលចម្លើយ</div>`;
+    $("fc-back").innerHTML = `<div class="big" style="font-size:clamp(26px,5.5vw,38px)">${esc(x.a)}</div>${full}`;
+  }
+  $("fc-pos").textContent = (acPos + 1) + " / " + acDeck.length;
+  $("fc-kn").textContent = acDeckSrc.filter(v => acKnown.has(v.key)).length;
+  $("fc-know").textContent = acKnown.has(x.key) ? "✔ ចាំហើយ (ចុចដើម្បីដក)" : "✔ ចាំហើយ";
+}
+function acGo(n){
+  if(!acDeck.length) return;
+  const was = acFlip;
+  acPos = (acPos + n + acDeck.length) % acDeck.length;
+  acFlip = false; $("fc").classList.remove("flip");
+  const t = ++acToken;
+  if(was) setTimeout(() => { if(t === acToken) acFill(); }, 260); else acFill();
+}
+function acFlipNow(){ if(!acDeck.length) return; acFlip = !acFlip; $("fc").classList.toggle("flip", acFlip); }
+$("fc").addEventListener("click", acFlipNow);
+$("fc-flip").addEventListener("click", acFlipNow);
+$("fc-prev").addEventListener("click", () => acGo(-1));
+$("fc-next").addEventListener("click", () => acGo(1));
+$("fc-shuf").addEventListener("click", () => {
+  for(let i = acDeck.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [acDeck[i], acDeck[j]] = [acDeck[j], acDeck[i]]; }
+  acPos = 0; acFlip = false; $("fc").classList.remove("flip"); acFill();
+});
+$("fc-know").addEventListener("click", () => {
+  const x = acDeck[acPos]; if(!x) return;
+  if(acKnown.has(x.key)) acKnown.delete(x.key); else acKnown.add(x.key);
+  acSave(); acFill();
+  if(acKnown.has(x.key)) acGo(1);
+});
+$("fc-again").addEventListener("click", () => { const x = acDeck[acPos]; if(!x) return; acKnown.delete(x.key); acSave(); acGo(1); });
+$("fc-reset").addEventListener("click", () => { acKnown.clear(); acSave(); acBuildDeck(acDeckSrc); });
+$("dk-rev").addEventListener("change", acFill);
+$("dk-hide").addEventListener("change", () => acBuildDeck(acDeckSrc));
+document.addEventListener("keydown", e => {
+  if(acView !== "deck" || !$("m6").classList.contains("active")) return;
+  if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+  if(e.key === "ArrowRight") acGo(1);
+  else if(e.key === "ArrowLeft") acGo(-1);
+  else if((e.key === " " || e.key === "Enter") && e.target.tagName !== "BUTTON"){ e.preventDefault(); acFlipNow(); }
+});
+
+/* ---- controls ---- */
+$("ac-q").addEventListener("input", acRender);
+$("ac-groups").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if(!b) return;
+  acGroup = +b.dataset.g;
+  $("ac-groups").querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c === b));
+  acRender();
+});
+$("ac-eg").addEventListener("click", e => { const b = e.target.closest("[data-eg]"); if(!b) return; $("ac-q").value = b.dataset.eg; acRender(); $("ac-q").focus(); });
+$("ac-views").addEventListener("click", e => {
+  const b = e.target.closest(".tab"); if(!b) return;
+  acView = b.dataset.v;
+  $("ac-views").querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t === b));
+  acRender();
+});
+acRender();
 
 /* init */
 renderProgress();
