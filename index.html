@@ -123,6 +123,13 @@ ul.l li::before{content:"";position:absolute;left:3px;top:.8em;width:7px;height:
 .formula{background:#0a0d13;border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin:8px 0;font-family:'Consolas','Courier New',monospace;font-size:14px;line-height:1.75;overflow-x:auto;color:#dfe5f5}
 .formula b{color:var(--gold)}
 .formula .c{color:#6f7a93}
+.formula{white-space:pre-wrap}
+.formula.big{font-size:16.5px;text-align:center;padding:16px 18px;white-space:normal}
+.formula.big .r{display:block;margin:3px 0}
+table.lots td:first-child{white-space:normal}
+table.lots small{color:var(--muted);font-weight:400}
+table.lots td b{font-family:'Inter',sans-serif}
+.lotcol{border-left:4px solid var(--gold)}
 
 /* tables */
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
@@ -375,12 +382,15 @@ footer .logo-chip img{height:34px}
         <tr><td>និមិត្តសញ្ញា</td><td class="en">EURUSD, GBPUSD, USDJPY, USDCHF… (Minors: EURGBP, GBPJPY…)</td><td class="en">XAUUSD</td><td class="en">USOIL (WTI) · UKOIL (Brent)<br><small style="color:var(--muted)">ឈ្មោះអាចខុសតាម broker</small></td></tr>
         <tr><td>ប្រភេទ</td><td>គូរូបិយប័ណ្ណ ទិញមួយ លក់មួយ</td><td>ដែកមានតម្លៃ (Spot) កំណត់តម្លៃជា USD</td><td>ទំនិញថាមពល (Commodity CFD)</td></tr>
         <tr><td>1 Lot ស្មើ</td><td class="mono">100,000 units</td><td class="mono">100 oz</td><td class="mono">1,000 barrels</td></tr>
-        <tr><td>ចលនាតូចបំផុតសម្រាប់គណនា</td><td>1 pip = 0.0001 (គូ JPY = 0.01)</td><td>0.01 = <b class="up">$1</b> / Lot</td><td>0.01 (1 សេន) = <b class="up">$10</b> / Lot</td></tr>
-        <tr><td>តម្លៃក្នុង 1 Lot</td><td>pip ≈ $10 (គូ xxxUSD)<br>USDJPY: pip ≈ 1000 ÷ rate</td><td>ចលនា 1.00 = $100</td><td>ចលនា 1.00 = $1,000</td></tr>
+        <tr><td>ចលនាតូចបំផុតសម្រាប់គណនា</td><td>1 pip = 0.0001 (គូ JPY = 0.01)</td><td>ចលនា <b>0.01</b> = <b class="up">$1.00</b> ក្នុង 1 Lot</td><td>ចលនា <b>0.01</b> = <b class="up">$10.00</b> ក្នុង 1 Lot</td></tr>
+        <tr><td>1 Lot · ចលនា</td><td class="mono">1 pip = <b class="up">$10.00</b><br><small style="color:var(--muted)">USDJPY: pip ≈ 1000 ÷ rate</small></td><td class="mono">ចលនា $1.00 = <b class="up">$100.00</b></td><td class="mono">ចលនា $1.00 = <b class="up">$1,000.00</b></td></tr>
+        <tr><td>0.10 Lot · ចលនា</td><td class="mono">1 pip = <b class="up">$1.00</b> <small style="color:var(--muted)">(Mini)</small></td><td class="mono">ចលនា $1.00 = <b class="up">$10.00</b></td><td class="mono">ចលនា $1.00 = <b class="up">$100.00</b></td></tr>
+        <tr><td>0.01 Lot · ចលនា</td><td class="mono">1 pip = <b class="up">$0.10</b> <small style="color:var(--muted)">(Micro)</small></td><td class="mono">ចលនា $1.00 = <b class="up">$1.00</b></td><td class="mono">ចលនា $1.00 = <b class="up">$10.00</b><br><small style="color:var(--muted)">ចលនា 0.01 = $0.10</small></td></tr>
         <tr><td>កត្តាជំរុញចម្បង</td><td>អត្រាការប្រាក់ គោលនយោបាយធនាគារកណ្តាល ទិន្នន័យសេដ្ឋកិច្ច</td><td>USD, Real Yield, ការភ័យខ្លាច (Safe Haven), ការទិញរបស់ធនាគារកណ្តាល</td><td>ផ្គត់ផ្គង់-តម្រូវការ, OPEC+, ស្តុក EIA, ភូមិសាស្ត្រនយោបាយ</td></tr>
         <tr><td>Volatility (ជាទូទៅ)</td><td><span class="badge y">មធ្យម</span></td><td><span class="badge r">ខ្ពស់</span></td><td><span class="badge r">ខ្ពស់ + Gap ពេលមានព័ត៌មាន</span></td></tr>
         <tr><td>ពេលសកម្មបំផុត (ម៉ោងកម្ពុជា)</td><td>London + New York 19:00–23:00</td><td>London និង New York (ពេលមានព័ត៌មាន USD)</td><td>New York និងថ្ងៃពុធ (EIA)</td></tr>
       </tbody></table></div>
+    <div class="tip"><b>របៀបអានតារាង៖</b> «ចលនា» = ចម្ងាយដែលតម្លៃដើរ។ P/L (ចំណេញ/ខាត) = ចលនា × Contract Size × Lot។ Lot កាន់តែតូច ចំណេញ/ខាតក្នុងមួយចលនាកាន់តែតិច — អ្នកចាប់ផ្តើមគួរចាប់ផ្តើមពី <b>0.01 Lot</b>។ មើលរូបមន្តលម្អិតក្នុង <a href="#m2" data-go="m2" style="color:var(--gold)">Module 2.1</a>។</div>
     <div class="note"><b>WTI vs Brent៖</b> WTI ជា benchmark របស់សហរដ្ឋអាមេរិក (Cushing, Oklahoma) រីឯ Brent ជា benchmark សកលពីសមុទ្រខាងជើង។ Contract size និង spread ក្នុងតារាងនេះជាស្តង់ដារទូទៅ — ត្រូវផ្ទៀងផ្ទាត់ជាមួយ broker របស់អ្នកជានិច្ច។</div>
   </div>
 
@@ -438,11 +448,49 @@ footer .logo-chip img{height:34px}
     <div class="tw" style="margin-top:16px"><table>
       <thead><tr><th>ទ្រព្យ</th><th>1 Lot ស្មើ</th><th>ចលនា</th><th>តម្លៃ / 1 Lot</th></tr></thead>
       <tbody>
-        <tr><td>Currencies (EURUSD…)</td><td class="mono">100,000 units</td><td class="mono">1 pip = 0.0001</td><td class="mono up">≈ $10</td></tr>
+        <tr><td>Currencies (EURUSD…)</td><td class="mono">100,000 units</td><td class="mono">1 pip = 0.0001</td><td class="mono up">≈ $10.00 / pip</td></tr>
         <tr><td>USDJPY</td><td class="mono">100,000 units</td><td class="mono">1 pip = 0.01</td><td class="mono">≈ ¥1,000 ÷ rate (ឧ. 150 → ≈ $6.67)</td></tr>
-        <tr><td>Gold (XAUUSD)</td><td class="mono">100 oz</td><td class="mono">0.01 / 1.00</td><td class="mono up">$1 / $100</td></tr>
-        <tr><td>Crude Oil (WTI)</td><td class="mono">1,000 barrels</td><td class="mono">0.01 / 1.00</td><td class="mono up">$10 / $1,000</td></tr>
+        <tr><td>Gold (XAUUSD)</td><td class="mono">100 oz</td><td class="mono">0.01 / 1.00</td><td class="mono up">$1.00 / $100.00</td></tr>
+        <tr><td>Crude Oil (WTI)</td><td class="mono">1,000 barrels</td><td class="mono">0.01 / 1.00</td><td class="mono up">$10.00 / $1,000.00</td></tr>
       </tbody></table></div>
+
+    <h3>រូបមន្តស្តង់ដារ៖ ចំណេញ/ខាត (P/L)</h3>
+    <div class="formula big"><span class="r"><b>P/L ($)</b> = ចលនាតម្លៃ × Contract Size × Lot</span><span class="r c">(សម្រាប់គូ xxxUSD, មាស និងប្រេង)</span></div>
+
+    <h3>🥇 គន្លឹះមាស Spot Gold (XAUUSD) — 1 Lot = 100 oz</h3>
+    <p style="font-size:14px">ចាប់ផ្តើមដោយរកថា Lot របស់យើងស្មើប៉ុន្មាន oz រួចគុណនឹងចលនាតម្លៃ ($)។ រូបមន្តគន្លឹះ៖</p>
+    <div class="formula big"><span class="r"><b>0.01 × 100 oz = $1.00</b></span><span class="r c">(0.01 Lot = 1 oz → ចលនា $1.00 ក្នុង 1 oz = $1.00)</span></div>
+    <div class="grid g3">
+      <div class="box lotcol"><b class="en gd">0.01 Lot</b><br><span class="mono">0.01 × 100 = 1 oz</span><br>មាសដើរ $1.00 → <b class="up">$1.00</b></div>
+      <div class="box lotcol"><b class="en gd">0.10 Lot</b><br><span class="mono">0.10 × 100 = 10 oz</span><br>មាសដើរ $1.00 → <b class="up">$10.00</b></div>
+      <div class="box lotcol"><b class="en gd">1.00 Lot</b><br><span class="mono">1.00 × 100 = 100 oz</span><br>មាសដើរ $1.00 → <b class="up">$100.00</b></div>
+    </div>
+    <div class="tip"><b>ចងចាំងាយបំផុត៖</b>
+      <ul class="l" style="margin:8px 0 0">
+        <li>បើមាសឡើង ឬចុះ <b>$1.00</b> ហើយយើងចូល Order ទំហំ <b>0.01 Lot</b> នោះយើងនឹងចំណេញ ឬខាត <b class="up">$1.00</b> គត់។</li>
+        <li>បើចូល <b>0.10 Lot</b> ពេលមាសដើរ $1.00 = ចំណេញ ឬខាត <b class="up">$10.00</b>។</li>
+        <li>បើចូល <b>1.00 Lot</b> ពេលមាសដើរ $1.00 = ចំណេញ ឬខាត <b class="up">$100.00</b> (ចលនា 0.01 = $1.00)។</li>
+      </ul></div>
+
+    <h3>តារាងប្រៀបធៀប Lot Size: 0.01 · 0.10 · 1.00</h3>
+    <div class="tw"><table class="lots">
+      <thead><tr><th>ទ្រព្យ</th><th>0.01 Lot</th><th>0.10 Lot</th><th>1.00 Lot</th></tr></thead>
+      <tbody>
+        <tr><td>🥇 Spot Gold (XAUUSD)<br><small>1 Lot = 100 oz</small></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$1.00</b></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$10.00</b></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$100.00</b><br><small>ចលនា 0.01 = $1.00</small></td></tr>
+        <tr><td>🛢️ Crude Oil (WTI/USOIL)<br><small>1 Lot = 1,000 barrels</small></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$10.00</b><br><small>ចលនា 0.01 = $0.10</small></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$100.00</b><br><small>ចលនា 0.01 = $1.00</small></td>
+          <td class="mono">ចលនា $1.00 = <b class="up">$1,000.00</b><br><small>ចលនា 0.01 = $10.00</small></td></tr>
+        <tr><td>💱 Forex Majors (EURUSD, GBPUSD)<br><small>1 Lot = 100,000 units</small></td>
+          <td class="mono">Micro<br>1 pip = <b class="up">$0.10</b></td>
+          <td class="mono">Mini<br>1 pip = <b class="up">$1.00</b></td>
+          <td class="mono">Standard<br>1 pip = <b class="up">$10.00</b></td></tr>
+      </tbody></table></div>
+    <div class="note"><b>ផ្ទៀងផ្ទាត់៖</b> Oil 0.01 Lot × ចលនា 0.01 = 0.01 × 1,000 × 0.01 = <b>$0.10</b> · Forex 0.01 Lot × 1 pip = 0.01 × 100,000 × 0.0001 = <b>$0.10</b> · Gold 1.00 Lot × 0.01 = 100 × 0.01 = <b>$1.00</b>។ pip របស់ USDJPY ប្រែតាម rate (≈ ¥1,000 ÷ rate ក្នុង 1 Lot)។ ត្រូវផ្ទៀងផ្ទាត់ Contract Size ជាមួយ Broker ជានិច្ច។</div>
+
     <h3>ឧទាហរណ៍គណនា</h3>
     <div class="grid g3">
       <div class="box"><b class="en">EURUSD Buy 1.0 lot</b><br><span class="mono">1.15000 → 1.15300</span><br>30 pips × $10 = <b class="up">+$300</b></div>
@@ -581,7 +629,7 @@ footer .logo-chip img{height:34px}
   <!-- Calc 3 -->
   <div class="calc" id="calc3">
     <h3><span class="tagc">CALC 3</span> Position Size &amp; Risk Management</h3>
-    <div class="sub">គណនា Lot size ពី Balance, % Risk និងចម្ងាយ Stop Loss។ ទិសដៅ (Buy/Sell) កំណត់ដោយស្វ័យប្រវត្តិ។</div>
+    <div class="sub">គណនា Lot size ពី Balance, % Risk និងចម្ងាយ Stop Loss។ រូបមន្ត៖ <b class="gd">Lot = Risk ($) ÷ (ចម្ងាយ SL × Contract Size)</b>។ ឧ. Gold SL ចម្ងាយ $10 → ខាត $1,000 ក្នុង 1 Lot ($100 ក្នុង 0.10 Lot · $10 ក្នុង 0.01 Lot)។ ទិសដៅ (Buy/Sell) កំណត់ដោយស្វ័យប្រវត្តិ។</div>
     <div class="fg">
       <label>ទ្រព្យ<select id="c3-ins"><option value="EURUSD">EURUSD</option><option value="USDJPY">USDJPY</option><option value="XAUUSD">XAUUSD (Gold)</option><option value="USOIL">USOIL (WTI)</option></select></label>
       <label>Balance ($)<input id="c3-bal" type="number" step="any" value="10000"></label>
@@ -598,6 +646,7 @@ footer .logo-chip img{height:34px}
     </div>
     <div class="out" id="c3-tps"></div>
     <div class="msg" id="c3-msg"></div>
+    <div class="msg" id="c3-note" style="color:var(--muted)"></div>
   </div>
   <div class="pager" data-for="m3"></div>
 </section>
@@ -895,10 +944,10 @@ function calc1(){
   mv.textContent = (diff / I.unit).toLocaleString("en-US", { maximumFractionDigits:1 });
   pl.textContent = (profit > 0 ? "+" : "") + usd(profit); pl.className = profit > 0 ? "pos" : profit < 0 ? "neg" : "";
   const notes = {
-    EURUSD:"EURUSD: P/L = ចលនាតម្លៃ × 100,000 × Lot។ 1 pip (0.0001) = $10 ក្នុង 1 Lot។",
-    USDJPY:"USDJPY: P/L (USD) = ចលនាតម្លៃ × 100,000 × Lot ÷ តម្លៃចេញ។ pip value ប្រែតាម rate។",
-    XAUUSD:"Gold: P/L = ចលនាតម្លៃ × 100 oz × Lot។ 0.01 = $1 · 1.00 = $100 ក្នុង 1 Lot។",
-    USOIL:"Crude Oil: P/L = ចលនាតម្លៃ × 1,000 barrels × Lot។ 0.01 = $10 · 1.00 = $1,000 ក្នុង 1 Lot។ (ផ្ទៀងផ្ទាត់ contract size ជាមួយ broker)"
+    EURUSD:"EURUSD: P/L = ចលនាតម្លៃ × 100,000 × Lot។ 1 pip (0.0001) = $0.10 (0.01 Lot) · $1.00 (0.10 Lot) · $10.00 (1.00 Lot)។",
+    USDJPY:"USDJPY: P/L (USD) = ចលនាតម្លៃ × 100,000 × Lot ÷ តម្លៃចេញ។ pip value ប្រែតាម rate (≈ ¥1,000 ÷ rate ក្នុង 1 Lot)។",
+    XAUUSD:"Gold: P/L = ចលនាតម្លៃ × 100 oz × Lot។ គន្លឹះ៖ 0.01 × 100 oz = $1.00 → ចលនា $1.00 = $1 (0.01 Lot) · $10 (0.10 Lot) · $100 (1.00 Lot)។ ក្នុង 1 Lot ចលនា 0.01 = $1.00។",
+    USOIL:"Crude Oil: P/L = ចលនាតម្លៃ × 1,000 barrels × Lot។ ចលនា $1.00 = $10 (0.01 Lot) · $100 (0.10 Lot) · $1,000 (1.00 Lot)។ ក្នុង 1 Lot ចលនា 0.01 = $10.00។ (ផ្ទៀងផ្ទាត់ contract size ជាមួយ broker)"
   };
   $("c1-note").textContent = notes[k];
 }
@@ -931,6 +980,13 @@ $("c2-ins").addEventListener("change", setC2);
 /* ---- Calc 3 ---- */
 function setC3(){ const d = INS[$("c3-ins").value].def; $("c3-en").value = d.en; $("c3-sl").value = d.sl; calc3(); }
 function calc3(){
+  const N3 = {
+    EURUSD:"EURUSD: 1 pip = $0.10 (0.01 Lot) · $1.00 (0.10 Lot) · $10.00 (1.00 Lot)។ Lot = Risk $ ÷ (pips ចម្ងាយ SL × $10)។",
+    USDJPY:"USDJPY: pip value ប្រែតាម rate (≈ ¥1,000 ÷ rate ក្នុង 1 Lot) ដូច្នេះ Lot ត្រូវគណនាតាម rate បច្ចុប្បន្ន។",
+    XAUUSD:"Gold: 0.01 × 100 oz = $1.00 → ចលនា $1.00 = $1 (0.01 Lot) · $10 (0.10 Lot) · $100 (1.00 Lot)។ Lot = Risk $ ÷ (ចម្ងាយ SL × 100)។",
+    USOIL:"Crude Oil: ចលនា $1.00 = $10 (0.01 Lot) · $100 (0.10 Lot) · $1,000 (1.00 Lot)។ Lot = Risk $ ÷ (ចម្ងាយ SL × 1,000)។"
+  };
+  $("c3-note").textContent = N3[$("c3-ins").value];
   const k = $("c3-ins").value, I = INS[k], bal = num("c3-bal"), rp = num("c3-risk"), en = num("c3-en"), sl = num("c3-sl");
   const outs = ["c3-rd","c3-d","c3-lpl","c3-lot","c3-ar"];
   const reset = m => { outs.forEach(i => $(i).textContent = "—"); $("c3-tps").innerHTML = ""; $("c3-msg").innerHTML = m || ""; };
