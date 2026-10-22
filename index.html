@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FGTC Academy – Forex, Gold &amp; Crude Oil</title>
+<title>GTCFX Academy – Forex, Gold &amp; Crude Oil</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -320,7 +320,7 @@ footer .logo-chip img{height:34px}
 <div class="app">
 
 <aside id="side">
-  <div class="logo-chip"><img class="logo" alt="FGTC"></div>
+  <div class="logo-chip"><img class="logo" alt="GTCFX"></div>
   <div class="teacher"><div class="avatar">ស</div><div><small>គ្រូបង្រៀន</small><b>សោម វាសនា</b></div></div>
   <nav class="menu" id="menu"></nav>
   <div class="prog"><small>វឌ្ឍនភាពសិក្សា <b id="pgTxt" class="num">0/6</b></small><div class="bar"><i id="pgBar"></i></div></div>
@@ -340,13 +340,13 @@ footer .logo-chip img{height:34px}
 <section class="mod active" id="home">
   <div class="hero">
     <div>
-      <span class="badge b">FGTC · TRUSTED | REGULATED | GLOBAL</span>
+      <span class="badge b">GTCFX · TRUSTED | REGULATED | GLOBAL</span>
       <h1 style="margin-top:.5em">មជ្ឈមណ្ឌលសិក្សា <em>Forex</em>, <em>មាស</em> និង <em>ប្រេងឆៅ</em></h1>
       <p>វគ្គមូលដ្ឋានសម្រាប់អ្នកចាប់ផ្តើម ៖ ពីរចនាសម្ព័ន្ធទីផ្សារ ការគណនា Pip/Margin ការគ្រប់គ្រងហានិភ័យ ដល់ការវិភាគសេដ្ឋកិច្ច និងបច្ចេកទេស ជាមួយម៉ាស៊ីនគណនាអន្តរកម្ម។</p>
       <p style="margin-bottom:16px">គ្រូបង្រៀន៖ <b>សោម វាសនា</b></p>
       <button class="btn gold" data-go="m1">ចាប់ផ្តើមរៀន →</button>
     </div>
-    <div class="lg"><img class="logo" alt="FGTC"></div>
+    <div class="lg"><img class="logo" alt="GTCFX"></div>
   </div>
 
   <div class="stats4">
@@ -739,7 +739,7 @@ footer .logo-chip img{height:34px}
 </main>
 
 <footer>
-  <div class="logo-chip"><img class="logo" alt="FGTC"></div>
+  <div class="logo-chip"><img class="logo" alt="GTCFX"></div>
   <div>មេរៀនដោយ <b>សោម វាសនា</b> · សម្រាប់ការអប់រំប៉ុណ្ណោះ មិនមែនជាដំបូន្មានវិនិយោគ</div>
 </footer>
 </div>
@@ -765,8 +765,8 @@ const MODS = [
 ];
 const LEARN = ["m1","m2","m3","m4","m5","m6"];
 let done = new Set();
-try{ done = new Set(JSON.parse(localStorage.getItem("fgtc_done") || "[]")); }catch(e){}
-function saveDone(){ try{ localStorage.setItem("fgtc_done", JSON.stringify([...done])); }catch(e){} }
+try{ done = new Set(JSON.parse(localStorage.getItem("GTCFX_done") || "[]")); }catch(e){}
+function saveDone(){ try{ localStorage.setItem("GTCFX_done", JSON.stringify([...done])); }catch(e){} }
 
 const menu = $("menu");
 menu.innerHTML = `<div class="cap">មាតិកា</div>` + MODS.map(m =>
@@ -790,7 +790,7 @@ function show(id, push){
   document.querySelectorAll(".mod").forEach(s => s.classList.toggle("active", s.id === id));
   menu.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.go === id));
   const m = MODS.find(x => x.id === id);
-  $("topTitle").textContent = id === "home" ? "FGTC Academy" : (m.ic.length === 1 && /\d/.test(m.ic) ? "Module " + m.ic + " · " : "") + m.t;
+  $("topTitle").textContent = id === "home" ? "GTCFX Academy" : (m.ic.length === 1 && /\d/.test(m.ic) ? "Module " + m.ic + " · " : "") + m.t;
   $("side").classList.remove("open");
   if(push !== false) history.replaceState(null, "", "#" + id);
   window.scrollTo({ top:0, behavior:"auto" });
@@ -1369,8 +1369,8 @@ AC.forEach((x, i) => {
   x.key = x.a;
 });
 const acKnown = new Set();
-try{ JSON.parse(localStorage.getItem("fgtc_ac_known") || "[]").forEach(v => acKnown.add(v)); }catch(e){}
-const acSave = () => { try{ localStorage.setItem("fgtc_ac_known", JSON.stringify([...acKnown])); }catch(e){} };
+try{ JSON.parse(localStorage.getItem("GTCFX_ac_known") || "[]").forEach(v => acKnown.add(v)); }catch(e){}
+const acSave = () => { try{ localStorage.setItem("GTCFX_ac_known", JSON.stringify([...acKnown])); }catch(e){} };
 let acGroup = 0, acView = "cards", acDeck = [], acPos = 0, acFlip = false, acToken = 0;
 
 /* chips */
